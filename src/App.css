@@ -22,7 +22,11 @@ nav ul a {
     text-decoration: none;
     color: #FFF;
 }
-a:hover{
+a{
+    text-decoration: none;
+    color: #F5BE46;
+}
+ul a:hover{
     transition: 0.5s;
     color: #F5BE46;
 }
@@ -33,4 +37,12 @@ nav ul a li {
 nav h2{
     font-weight: 800;
     color: #F5BE46;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 30px;
+    margin-right: 5px;
 }
