@@ -1,6 +1,10 @@
-const ItemListContainer = (props) => {
+import ItemCount from "../components/ItemCount";
+
+const ItemListContainer = () => {
     return (
-        <h2> {props.texto} </h2>
+        <div className="itemContainer">
+            <ItemCount stock={5} initial={1} onAdd="onAdd()"/>
+        </div>
     )
 }
 

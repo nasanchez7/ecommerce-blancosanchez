@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <ItemListContainer texto="Prueba las mejores hamburguesas de Argentina!"/>
+      <ItemListContainer/>
     </div>
   );
 }
