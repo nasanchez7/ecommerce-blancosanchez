@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const ItemCount = ({stock, initial,  onAdd}) => {
 
-    const [contador, setContador] = useState(initial);
+    let [contador, setContador] = useState(initial);
 
     function onAdd(){
         if(contador > stock || contador < initial){
