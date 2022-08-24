@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './scss/styles.scss';
 import ItemListContainer from './container/ItemListContainer';
 import Nav from './components/NavBar';

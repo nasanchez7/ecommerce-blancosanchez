@@ -39,7 +39,10 @@
         }
         .button1{
             padding: 0px 5px;
-            border: 1px solid $colorPrimario;
+            border: none;
+            color: $colorPrimario;
+            font-size: 20px;
+            font-weight: 800;
             background-color: #FFF;
             border-radius: 5px;
             cursor: pointer;
