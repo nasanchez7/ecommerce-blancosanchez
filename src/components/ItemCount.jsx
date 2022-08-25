@@ -12,7 +12,7 @@ const ItemCount = ({stock, initial,  onAdd}) => {
         }
         if(contador > stockDisponible){
             console.log("No hay esa cantidad de stock disponible");
-            setStock(stockDisponible = stockDisponible)
+            setStock(stockDisponible)
             return
         }else{
             console.log("Usted agrego " + contador + " productos al carrito");
