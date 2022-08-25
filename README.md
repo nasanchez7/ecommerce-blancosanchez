@@ -1,6 +1,6 @@
-# Burgers
+# OpenMarket
 
-- [Burgers](https://github.com/nasanchez7 "Burgers") es un ecommerce creado con ReactJs basado en una hamburgueseria.
+- [OpenMarket](https://github.com/nasanchez7 "OpenMarket") es un ecommerce creado con ReactJs.
 
 
 ## Esta web fue diseñada y contruida con
