@@ -10,10 +10,7 @@ const ItemCount = ({stock, initial,  onAdd}) => {
         if(stockDisponible <= 0){
             setStock(stockDisponible = 0);
         }
-        if(stockDisponible == 0){
-            setContador(contador = stockDisponible)
-        }
-        if(contador > stockDisponible){
+        if(contador > stockDisponible || stockDisponible === 0){
             console.log("No hay esa cantidad de stock disponible");
             setStock(stockDisponible)
             return
@@ -33,7 +30,7 @@ const ItemCount = ({stock, initial,  onAdd}) => {
                     }else{
                         setContador(contador - 1)
                     }
-                    if(stockDisponible == 0){
+                    if(stockDisponible === 0){
                         setContador(contador = stockDisponible)
                     }
                     if(stockDisponible <= 0){
