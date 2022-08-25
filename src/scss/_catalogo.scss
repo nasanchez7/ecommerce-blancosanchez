@@ -2,9 +2,8 @@
 .itemCount{
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 100%;
     height: auto;
-    padding: 10px;
     h2{
         font-size: 14px;
         display: flex;
@@ -45,6 +44,42 @@
             background-color: #FFF;
             border-radius: 5px;
             cursor: pointer;
+        }
+    }
+}
+
+.cardList{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        background-color: $blancoGris;
+        padding: 10px;
+        border-radius: 10px;
+        justify-content: space-between;
+        margin-top: 10px;
+        .cardImage{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                border-radius: 10px;
+                width: 90px;
+            }
+            h2{
+                font-size: 16px;
+                margin-top: 10px;
+                color: rgba(0, 0, 0, 0.521);
+            }
+        }
+        .cardPrice{
+            h3{
+                font-size: 15px;
+            }
         }
     }
 }

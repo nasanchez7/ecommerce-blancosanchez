@@ -21,7 +21,6 @@ const ItemCount = ({stock, initial,  onAdd}) => {
 
     return (
         <div className="itemCount">
-            <h2>Producto</h2>
             <h4>Stock disponible: {stockDisponible}</h4>
             <div className="count">
                 <button className="button1" onClick={() => {
