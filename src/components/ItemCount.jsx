@@ -21,7 +21,7 @@ const ItemCount = ({stock, initial,  onAdd}) => {
 
     return (
         <div className="itemCount">
-            <h4>Stock disponible: {stockDisponible}</h4>
+            <h4>Stock disponible: {stock}</h4>
             <div className="count">
                 <button className="button1" onClick={() => {
                     if(contador <= initial){

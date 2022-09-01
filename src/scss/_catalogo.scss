@@ -80,6 +80,53 @@
             h3{
                 font-size: 15px;
             }
+            a{
+                color: black;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.itemDetailContainer{
+    .item{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        .itemImg{
+            img{
+                height: 150px;
+            }
+        }
+        .itemDetail{
+            border: 1px solid lightgray;
+            padding: 20px;
+            .price{
+                    font-weight: 800;
+            }
+            .condition{
+                color: $colorPrimario;
+            }
+            .favorite{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                i{
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+                i:hover{
+                    color: $colorPrimario;
+                }
+            }
+            h5{
+                font-size: 10px;
+                color: rgba(0, 0, 0, 0.349);
+                font-weight: 800;
+            }
         }
     }
 }

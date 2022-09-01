@@ -9,6 +9,7 @@ const Item = ({title, price, image}) => {
                 <h2> {title} </h2>
             </div>
             <div className="cardPrice">
+                <a href="">Ver mas detalles</a>
                 <h3> $ {price} </h3>
                 <ItemCount initial={1} stock={5} />
             </div>
