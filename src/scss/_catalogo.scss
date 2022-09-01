@@ -103,8 +103,12 @@
         .itemDetail{
             border: 1px solid lightgray;
             padding: 20px;
+            .title{
+                font-size: 28px;
+            }
             .price{
                     font-weight: 800;
+                    font-size: 23px;
             }
             .condition{
                 color: $colorPrimario;

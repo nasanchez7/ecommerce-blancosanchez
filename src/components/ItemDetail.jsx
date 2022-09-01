@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
                     <h4 className="condition"> {item.condition} </h4>
                     <i class='bx bx-heart' ></i>
                 </div>
-                <h3>{item.title} </h3>
+                <h3 className="title">{item.title} </h3>
                 <h4 className="price">$ {item.price}</h4>
                 <h5>Cantidad vendida: {item.sold_quantity} </h5>
                 <ItemCount initial={1} stock={item.available_quantity}/>
