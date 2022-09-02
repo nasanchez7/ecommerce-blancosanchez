@@ -1,17 +1,18 @@
-import ItemCount from "./ItemCount";
 
-
-const Item = ({title, price, image}) => {
+const Item = ({title, price, image, marca}) => {
     return(
         <div className="card">
             <div className="cardImage">
                 <img src={image} alt={title}/>
-                <h2> {title} </h2>
             </div>
             <div className="cardPrice">
-                <a href="">Ver mas detalles</a>
+                <div className="cardFavourite">
+                    <h2> {title} </h2>
+                    <i className='bx bx-heart' ></i>
+                </div>
+                <h4>Vendido por {marca}</h4>
                 <h3> $ {price} </h3>
-                <ItemCount initial={1} stock={5} />
+                <a href="#">Ver mas detalles</a>
             </div>
         </div>
     )

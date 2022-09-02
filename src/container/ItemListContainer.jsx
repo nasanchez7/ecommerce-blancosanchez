@@ -22,6 +22,8 @@ const ItemListContainer = () => {
         obtenerProductos();
     }, [])
 
+    console.log(productos);
+
     return (
         <div>
             <ItemList items={productos}/>
