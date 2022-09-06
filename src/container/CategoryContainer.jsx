@@ -1,34 +1,29 @@
-
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
 
-const ItemListContainer = () => {
-
-    //Definimos estados
-
+const CategoryContainer = () => {
+    const {categoriaId} = useParams();
     const [productos, setProductos] = useState([]);
-
-    //Traemos productos de api
+    console.log(categoriaId);
 
     const obtenerProductos = async () =>{
-        const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=celulares`);
+        const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${categoriaId}`);
         const data = await response.json();
         setProductos(data.results);
     }
 
-    //UseEffect
+    obtenerProductos();
 
     useEffect(() => {
-        obtenerProductos();
-    }, [])
-
-    //console.log(productos);
+    },[])
 
     return (
         <div>
             <ItemList items={productos}/>
         </div>
     )
+
 }
 
-export default ItemListContainer;
+export default CategoryContainer;

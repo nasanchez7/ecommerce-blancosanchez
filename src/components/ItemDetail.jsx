@@ -1,9 +1,6 @@
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({item, description}) => {
-
-    console.log(description);
-
     return(
         <div className="item">
             <div className="itemImg">
