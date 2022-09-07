@@ -19,7 +19,11 @@ const CategoryContainer = () => {
     },[])
 
     return (
-        <div>
+        <div className="listContainer">
+            <div className="categoriaTitulo">
+                <h1>Productos </h1>
+                <h2> / {categoriaId} </h2>
+            </div>
             <ItemList items={productos}/>
         </div>
     )

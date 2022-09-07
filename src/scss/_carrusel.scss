@@ -8,7 +8,7 @@
         .sliderContenedor{
             display: flex;
             width: 300vw;
-            transition: all 300ms ease-out;
+            transition: all 1000ms ease-out;
             .sliderItem{
                 width: 100vw;
             }
@@ -46,6 +46,10 @@
                 background-color: $letras;
                 color: $colorPrimario;
                 cursor: pointer;
+                a{
+                    color: $colorPrimario;
+                    text-decoration: none;
+                }
             }
             button:hover{
                 background-color: $blancoGris;

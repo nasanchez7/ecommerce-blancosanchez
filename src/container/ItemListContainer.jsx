@@ -25,7 +25,8 @@ const ItemListContainer = () => {
     //console.log(productos);
 
     return (
-        <div>
+        <div className="listContainer">
+            <h1>Productos destacados</h1>
             <ItemList items={productos}/>
         </div>
     )

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Carrusel = () => {
 
@@ -10,7 +11,7 @@ const Carrusel = () => {
 
             const tamañoSlide = sliderContenedor.children[0].offsetWidth;
 
-            sliderContenedor.style.transition = 'all 300ms ease-out'
+            sliderContenedor.style.transition = 'all 1000ms ease-out'
             sliderContenedor.style.transform = `translateX(-${tamañoSlide}px)`;
 
             const transicion = () => {
@@ -42,16 +43,17 @@ const Carrusel = () => {
             sliderContenedor.style.transform = `translateX(-${tamañoSlide}px)`
 
             setTimeout(()=>{
-                sliderContenedor.style.transition = 'all 300ms ease-out'
+                sliderContenedor.style.transition = 'all 1000ms ease-out'
                 sliderContenedor.style.transform = `translateX(0)`;
-            }, 30)
+            }, 100)
         }
     }
 
+
     useEffect(() => {
-
-        
-
+        setInterval(()=>{
+            siguiente();
+        }, 6500)
     },[])
 
     return(
@@ -69,7 +71,7 @@ const Carrusel = () => {
                                     <h4>Ultimos modelos y al mejor precio</h4>
                                 </div>
                                 <div className="slider-btn">
-                                    <button>Ver todos los productos</button>
+                                    <button> <Link to={`/categoria/iphone`}>Ver todos los productos</Link> </button>
                                 </div>
                             </div>
                             <div className="slider-img">
@@ -85,7 +87,7 @@ const Carrusel = () => {
                                     <h4>Ultimos modelos y al mejor precio</h4>
                                 </div>
                                 <div className="slider-btn">
-                                    <button>Ver todos los productos</button>
+                                    <button> <Link to={'/categoria/samsung'}>Ver todos los productos</Link></button>
                                 </div>
                             </div>
                             <div className="slider-img">
