@@ -1,6 +1,7 @@
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Buscador from "./Buscador";
 import CartWidget from "./CartWidget";
 
 const Nav = () => {
@@ -43,6 +44,7 @@ const Nav = () => {
                             <h2>OpenMarket</h2>
                     </div>
                 </Link>
+                <Buscador/>
                 <div className="nav-items">
                     <div className="categorias">
                             <h3 id="btnDrop">Marcas</h3>

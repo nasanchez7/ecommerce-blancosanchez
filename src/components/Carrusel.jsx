@@ -99,7 +99,7 @@ const Carrusel = () => {
                             <div>
                                 <div className="slider-titulo">
                                     <h2>Descubre los mejores</h2>
-                                    <h3>accesorios tech</h3>
+                                    <h3>productos Motorola</h3>
                                     <h4>Ultimos modelos y al mejor precio</h4>
                                 </div>
                                 <div className="slider-btn">
@@ -107,7 +107,7 @@ const Carrusel = () => {
                                 </div>
                             </div>
                             <div className="slider-img">
-                                <img src="/airpods.png" alt=""/>
+                                <img src="/motorola.png" alt=""/>
                             </div>
                         </div>
 

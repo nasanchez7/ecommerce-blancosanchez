@@ -96,4 +96,21 @@ nav {
             font-size: 11px;
         }
     }
+    .buscador{
+        padding: 5px 25px;
+        display: flex;
+        align-items: center;
+        background-color: $blancoGris;
+        border-radius: 5px;
+        i{
+            font-size: 20px;
+            margin-right: 5px;
+        }
+        input{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            padding: 5px 10px;
+        }
+    }
 }
