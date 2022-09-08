@@ -10,8 +10,8 @@ const ItemDetailContainer = () => {
     const getItem = async () => {
         const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${itemId}`);
         const data = await response.json();
-        const item = data.results.filter(producto => producto.title == itemId);
-        console.log(item);
+        const item = data.results.filter(producto => producto.title === itemId);
+        //console.log(item);
         setProducto(item[0]);
         setDescription(item[0].attributes[0]);
     }

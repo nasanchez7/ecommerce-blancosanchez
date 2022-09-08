@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import Carrusel from "../components/Carrusel";
 import ItemList from "../components/ItemList";
 
 const ItemListContainer = () => {
@@ -25,10 +26,14 @@ const ItemListContainer = () => {
     //console.log(productos);
 
     return (
-        <div className="listContainer">
-            <h1>Productos destacados</h1>
-            <ItemList items={productos}/>
+        <div>
+            <Carrusel />
+            <div className="listContainer">
+                <h1>Productos destacados</h1>
+                <ItemList items={productos}/>
+            </div>
         </div>
+
     )
 }
 

@@ -1,6 +1,14 @@
+import { useState } from "react";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({item, description}) => {
+
+    let [contador, setContador] = useState(1);
+
+    const onAdd = () => {
+        console.log("Agregaste al carrito " + contador + " " + item.title);
+    }
+
     return(
         <div className="item">
             <div className="itemImg">
@@ -15,7 +23,9 @@ const ItemDetail = ({item, description}) => {
                     <h4>Vendido por {description.value_name} </h4>
                     <h4 className="price">$ {item.price}</h4>
                     <h5>Cantidad vendida: {item.sold_quantity} </h5>
-                    <ItemCount initial={1} stock={item.available_quantity}/>
+                    <div id="itemCount">
+                        <ItemCount contador={contador} setContador={setContador} stock={item.available_quantity} onAdd={onAdd} />
+                    </div>
                 </div>
         </div>
     )

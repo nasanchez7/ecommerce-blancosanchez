@@ -19,7 +19,7 @@ const CategoryContainer = () => {
     },[])
 
     return (
-        <div className="listContainer">
+        <div className="categoriaContainer">
             <div className="categoriaTitulo">
                 <h1>Productos </h1>
                 <h2> / {categoriaId} </h2>
