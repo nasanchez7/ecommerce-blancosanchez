@@ -6,9 +6,15 @@ const CarritoProvider = ({children}) => {
     const [carrito, setCarrito] = useState([]);
 
     const addItem = (item, cantidad) => {
-        item.cantidad = cantidad;
-        setCarrito([...carrito, item]);
-        console.log(item);
+        let itemRepetido = carrito.findIndex(x => x.id == item.id);
+        if(itemRepetido > -1){
+            carrito.splice(itemRepetido, 1)
+            item.cantidad = cantidad;
+            setCarrito([...carrito, item]);
+        }else{
+            item.cantidad = cantidad;
+            setCarrito([...carrito, item]);
+        }
     }
 
     const removeItem = (itemId, item) => {

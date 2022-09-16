@@ -62,7 +62,9 @@ const Nav = () => {
                         <h3>Favoritos</h3>
                     </ul>
                 </div>
-                <CartWidget />
+                <Link to={'/cart'}>
+                    <CartWidget />
+                </Link>
             </nav>
     );
 }
