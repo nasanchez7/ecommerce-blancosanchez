@@ -6,8 +6,6 @@ const Cart = () => {
     //Context
     const carrito = useContext(CarritoContext)
 
-    let total = 0;
-
     useEffect(()=>{
     })
 
