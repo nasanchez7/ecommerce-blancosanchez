@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
+import CarritoContext from "../context/CarritoContext";
 
 const ItemDetail = ({item, description}) => {
+
+    //Context
+    const carrito = useContext(CarritoContext)
 
     let [contador, setContador] = useState(1);
 
     const onAdd = () => {
-        console.log("Agregaste al carrito " + contador + " " + item.title);
+        carrito.addItem(item, contador);
     }
 
     return(

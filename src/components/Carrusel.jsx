@@ -54,7 +54,7 @@ const Carrusel = () => {
         setInterval(()=>{
             siguiente();
         }, 6500)
-    },[])
+    })
 
     return(
         <div className="productoDestacado">

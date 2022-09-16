@@ -1,9 +1,13 @@
-
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import Carrusel from "../components/Carrusel";
 import ItemList from "../components/ItemList";
+import CarritoContext from "../context/CarritoContext";
 
 const ItemListContainer = () => {
+
+    //Context
+
+    //const carrito = useContext(CarritoContext)
 
     //Definimos estados
 
@@ -21,13 +25,12 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         obtenerProductos();
-    }, [])
+    })
 
     //console.log(productos);
 
     return (
         <div>
-            <Carrusel />
             <div className="listContainer">
                 <h1>Productos destacados</h1>
                 <ItemList items={productos}/>

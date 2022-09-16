@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../components/ItemDetail";
+import CarritoContext from "../context/CarritoContext";
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([]);
@@ -16,9 +17,12 @@ const ItemDetailContainer = () => {
         setDescription(item[0].attributes[0]);
     }
 
+    //Contexto
+    //const carrito = useContext(CarritoContext)
+
     useEffect(() => {
         getItem();
-    }, [])
+    })
 
 
     return (

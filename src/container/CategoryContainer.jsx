@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
+import CarritoContext from "../context/CarritoContext";
 
 const CategoryContainer = () => {
     const {categoriaId} = useParams();
     const [productos, setProductos] = useState([]);
-    console.log(categoriaId);
 
     const obtenerProductos = async () =>{
         const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${categoriaId}`);
@@ -15,8 +15,12 @@ const CategoryContainer = () => {
 
     obtenerProductos();
 
+    //Context
+
+    const carrito = useContext(CarritoContext)
+
     useEffect(() => {
-    },[])
+    })
 
     return (
         <div className="categoriaContainer">
