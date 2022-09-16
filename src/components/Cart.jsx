@@ -11,7 +11,16 @@ const Cart = () => {
 
     return(
         <div className="carritoContainer">
-            <h2>Tu carrito de compras</h2>
+            <div className="removeItems">
+                <h2>Tu carrito de compras</h2>
+                {carrito.carrito.length > 0 ? 
+                <div className="btnVaciar" onClick={()=>{
+                    carrito.clearCart();
+                }}>
+                    <h4>Vaciar carrito</h4>
+                    <i className='bx bxs-trash'></i>
+                </div> : ""}
+            </div>
             <div className="carrito">
                 {carrito.carrito.map((item, index) => {
                     return(

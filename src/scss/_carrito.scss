@@ -74,4 +74,23 @@
             cursor: pointer;
         }
     }
+    .removeItems{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+        .btnVaciar{
+            display: flex;
+            align-items: center;
+            background-color: $colorPrimario;
+            color: #FFF;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            h4{
+                font-size: 13px;
+            }
+        }
+    }
 }
