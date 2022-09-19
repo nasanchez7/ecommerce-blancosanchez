@@ -8,7 +8,7 @@ const CartWidget = () => {
     return (
         <div className="cartWidget">
             <i className='bx bxs-cart'></i>
-            <h4> {carrito.carrito.length} </h4>
+            <h4> {carrito.total} </h4>
         </div>
     )
 }

@@ -43,6 +43,12 @@ const Cart = () => {
                 })}
             </div>
             <div className="btnCompra">
+                {carrito.carrito.length > 0 ?
+                <div className="totalPagar">
+                    <h3>Total a pagar</h3>
+                    <h4>$ {carrito.totalPagar}</h4>
+                </div>
+                : ""}
                 {carrito.carrito.length > 0 ? <button>Finalizar compra</button> : ""}
             </div>
         </div>

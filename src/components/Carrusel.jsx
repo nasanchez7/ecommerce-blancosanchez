@@ -54,7 +54,7 @@ const Carrusel = () => {
         setInterval(()=>{
             siguiente();
         }, 6500)
-    })
+    }, [])
 
     return(
         <div className="productoDestacado">
@@ -103,7 +103,7 @@ const Carrusel = () => {
                                     <h4>Ultimos modelos y al mejor precio</h4>
                                 </div>
                                 <div className="slider-btn">
-                                    <button>Ver todos los productos</button>
+                                    <button><Link to={'/categoria/motorola'}>Ver todos los productos</Link></button>
                                 </div>
                             </div>
                             <div className="slider-img">
