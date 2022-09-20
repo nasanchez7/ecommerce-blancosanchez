@@ -1,6 +1,7 @@
 
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import CarritoContext from "../context/CarritoContext";
 import Buscador from "./Buscador";
 import CartWidget from "./CartWidget";
 
@@ -19,6 +20,9 @@ const Nav = () => {
             path: "motorola"
         }
     ]
+
+    const carrito = useContext(CarritoContext);
+
     useEffect(() =>{
         const btnDrop = document.getElementById("btnDrop")
         const dropdown = document.getElementById("dropdown");
@@ -62,9 +66,11 @@ const Nav = () => {
                         <h3>Favoritos</h3>
                     </ul>
                 </div>
+                {carrito.carrito.length == 0 ? "" :
                 <Link to={'/cart'}>
                     <CartWidget />
                 </Link>
+                }
             </nav>
     );
 }

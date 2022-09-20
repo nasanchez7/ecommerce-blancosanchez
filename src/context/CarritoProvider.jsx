@@ -25,7 +25,7 @@ const CarritoProvider = ({children}) => {
         item.cantidad > 1 ? item.cantidad = item.cantidad - 1 : carrito.splice(itemId, 1);
         setCarrito([...carrito])
         setTotal(total - 1)
-        setTotalPagar(totalPagar - (item.price * item.cantidad));
+        setTotalPagar(totalPagar - item.price);
     }
 
     const clearCart = () => {

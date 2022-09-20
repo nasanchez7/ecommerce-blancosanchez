@@ -1,5 +1,6 @@
 import CarritoContext from "../context/CarritoContext";
 import { useEffect, useState, useContext } from "react";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
 
@@ -22,6 +23,12 @@ const Cart = () => {
                 </div> : ""}
             </div>
             <div className="carrito">
+                {carrito.carrito.length == 0 ? 
+                <div className="noProducts">
+                    <h3>No hay productos en el carrito</h3>
+                    <Link to={"/"}>Explorar productos</Link>
+                </div>
+                : ""}
                 {carrito.carrito.map((item, index) => {
                     return(
                         <div className="card" key={index}>
