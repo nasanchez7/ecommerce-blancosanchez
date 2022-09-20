@@ -1,0 +1,30 @@
+.footerContainer{
+    padding: 40px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 10px;
+        }
+    }
+    .links{
+        h3{
+            font-weight: 600;
+            font-size: 15px;
+            color: rgb(29, 29, 29);
+            cursor: pointer;
+        }
+        h3:hover{
+            color: $colorPrimario;
+            transition: 0.5s;
+        }
+    }
+    .copy{
+        h3{
+            font-size: 15px;
+        }
+    }
+}

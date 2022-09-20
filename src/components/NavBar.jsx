@@ -62,8 +62,8 @@ const Nav = () => {
                             </ul>
                     </div>
                     <ul>
-                        <h3>Catalogo</h3>
-                        <h3>Favoritos</h3>
+                        <Link to={"/"}><h3>Catalogo</h3></Link>  
+                        <Link to={"/favoritos"}><h3>Favoritos</h3></Link> 
                     </ul>
                 </div>
                 {carrito.carrito.length == 0 ? "" :
