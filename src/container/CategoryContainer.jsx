@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
 import CarritoContext from "../context/CarritoContext";
 import Carrusel from "../components/Carrusel";
+import { collection, getFirestore , getDocs, query, where } from "firebase/firestore"
 
 const CategoryContainer = () => {
 
@@ -10,16 +11,19 @@ const CategoryContainer = () => {
     const [productos, setProductos] = useState([]);
 
     const obtenerProductos = async () =>{
-        const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${categoriaId}`);
-        const data = await response.json();
-        setProductos(data.results);
+
+        const db = getFirestore();
+
+        const items = query(collection(db, "items"), where("category", "==", categoriaId));
+
+        getDocs(items).then((snapshot)=>{
+            setProductos(snapshot.docs.map((doc) => ({ id:doc.id, ...doc.data() })));
+        })
+
     }
 
     obtenerProductos();
 
-    //Context
-
-    const carrito = useContext(CarritoContext)
 
     useEffect(() => {
     }, [])

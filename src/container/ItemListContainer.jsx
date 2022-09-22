@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import Carrusel from "../components/Carrusel";
 import ItemList from "../components/ItemList";
+import { collection, getFirestore , getDocs } from "firebase/firestore"
 
 const ItemListContainer = () => {
 
@@ -11,18 +12,24 @@ const ItemListContainer = () => {
     //Traemos productos de api
 
     const obtenerProductos = async () =>{
-        const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=celulares`);
-        const data = await response.json();
-        setProductos(data.results);
+        
+        const db = getFirestore();
+
+        const items = collection(db, "items");
+
+        getDocs(items).then((snapshot)=>{
+            setProductos(snapshot.docs.map((doc) => ({ id:doc.id, ...doc.data() })));
+        })
+
     }
 
     //UseEffect
 
     useEffect(() => {
         obtenerProductos();
+        console.log(productos);
     }, [])
 
-    //console.log(productos);
 
     return (
         <div>

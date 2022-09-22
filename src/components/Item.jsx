@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const Item = ({title, price, image, marca}) => {
+const Item = ({title, price, image, description, id}) => {
     return(
         <div className="card">
-            <div className="cardImage">
+             <div className="cardImage">
                 <img src={image} alt={title}/>
             </div>
             <div className="cardPrice">
@@ -11,10 +11,10 @@ const Item = ({title, price, image, marca}) => {
                     <h2> {title} </h2>
                     <i className='bx bx-heart' ></i>
                 </div>
-                <h4>Vendido por {marca}</h4>
+                <h4>{description}</h4>
                 <h3> $ {price} </h3>
-                <Link to={`/item/${title}`}>Ver mas detalles</Link>
-            </div>
+                <Link to={`/item/${id}`}>Ver mas detalles</Link>
+            </div> 
         </div>
     )
 }

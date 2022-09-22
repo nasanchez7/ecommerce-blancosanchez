@@ -33,7 +33,7 @@ const Cart = () => {
                     return(
                         <div className="card" key={index}>
                             <div className="cardImage">
-                                <img src={item.thumbnail} alt={item.title}/>
+                                <img src={item.img} alt={item.title}/>
                             </div>
                             <div className="cardPrice">
                                 <div className="cardFavourite">

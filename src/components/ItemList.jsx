@@ -1,15 +1,14 @@
-
 import Item from "./Item";
 
 const ItemList = ({items}) => {
 
     return (
         <div className="cardList">
-            {items.map((producto, index) => {
-                return <Item marca={producto.attributes[0].value_name} title={producto.title} price={producto.price} image={producto.thumbnail} stock={producto.available_quantity} key={index} />
+            {items.map((producto) => {
+                return <Item id={producto.id} description={producto.description}  title={producto.title} price={producto.price} image={producto.img} key={producto.id} />
             })}
-        </div>
+        </div> 
     )
 }
 
-export default ItemList;
+export default ItemList; 
