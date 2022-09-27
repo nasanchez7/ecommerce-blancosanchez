@@ -12,7 +12,7 @@ const Nav = () => {
             path: "samsung"
         },
         {
-            name: "Iphone",
+            name: "iPhone",
             path: "iphone"
         },
         {

@@ -1,14 +1,17 @@
 import CarritoContext from "../context/CarritoContext";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import Form from "./Form";
 
 const Cart = () => {
 
     //Context
     const carrito = useContext(CarritoContext)
+    
 
     useEffect(()=>{
-    })
+
+    },[])
 
     return(
         <div className="carritoContainer">
@@ -56,10 +59,11 @@ const Cart = () => {
                     <h4>$ {carrito.totalPagar}</h4>
                 </div>
                 : ""}
-                {carrito.carrito.length > 0 ? <button>Finalizar compra</button> : ""}
+                {carrito.carrito.length > 0 ? <Form></Form> : ""}
             </div>
         </div>
     )
 }
 
 export default Cart;
+

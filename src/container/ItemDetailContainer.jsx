@@ -23,8 +23,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         getItem();
-        console.log(producto);
-    })
+    },[])
 
 
     return (
