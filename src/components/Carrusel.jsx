@@ -5,43 +5,30 @@ const Carrusel = () => {
 
     const siguiente = () => {
         const sliderContenedor = document.getElementById("sliderContenedor");
-
         if(sliderContenedor.children.length > 0){
             const primerElemento = sliderContenedor.children[0];
-
             const tamañoSlide = sliderContenedor.children[0].offsetWidth;
-
             sliderContenedor.style.transition = 'all 1000ms ease-out'
             sliderContenedor.style.transform = `translateX(-${tamañoSlide}px)`;
-
             const transicion = () => {
                 sliderContenedor.style.transition = 'none';
                 sliderContenedor.style.transform = `translateX(0)`;
                 sliderContenedor.appendChild(primerElemento);
-
                 sliderContenedor.removeEventListener("transitionend", transicion)
             }
-
             sliderContenedor.addEventListener("transitionend", transicion);
-            
         }
     }
 
     const anterior = () => {
         const sliderContenedor = document.getElementById("sliderContenedor");
-
         if(sliderContenedor.children.length > 0){
             const index = sliderContenedor.children.length - 1;
             const ultimoElemento = sliderContenedor.children[index];
-           
-
             sliderContenedor.insertBefore(ultimoElemento, sliderContenedor.firstChild);
-
             sliderContenedor.style.transition = 'none'
-
             const tamañoSlide = sliderContenedor.children[0].offsetWidth;
             sliderContenedor.style.transform = `translateX(-${tamañoSlide}px)`
-
             setTimeout(()=>{
                 sliderContenedor.style.transition = 'all 1000ms ease-out'
                 sliderContenedor.style.transform = `translateX(0)`;
@@ -58,11 +45,8 @@ const Carrusel = () => {
 
     return(
         <div className="productoDestacado">
-
                 <div className="slider">
-                        
                     <div className="sliderContenedor" id="sliderContenedor">
-        
                         <div className="sliderItem descripcionProducto">
                             <div>
                                 <div className="slider-titulo">
@@ -78,7 +62,6 @@ const Carrusel = () => {
                                 <img src="/iphone.png" alt=""/>
                             </div>
                         </div>
-
                         <div className="sliderItem descripcionProducto">
                             <div>
                                 <div className="slider-titulo">
@@ -94,7 +77,6 @@ const Carrusel = () => {
                                 <img src="/samsung.png" alt=""/>
                             </div>
                         </div>
-
                         <div className="sliderItem descripcionProducto">
                             <div>
                                 <div className="slider-titulo">
@@ -110,23 +92,14 @@ const Carrusel = () => {
                                 <img src="/motorola.png" alt=""/>
                             </div>
                         </div>
-
                     </div>
-        
                 </div>
-        
                 <div className="slider-botones">
                     <button onClick={anterior}><i className='bx bx-chevron-left'></i></button>
                     <button onClick={siguiente}><i className='bx bx-chevron-right'></i></button>
                 </div>
-        
             </div>
-
-
-
     )
-
-
 }
 
 export default Carrusel;

@@ -1,7 +1,6 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
-import CarritoContext from "../context/CarritoContext";
 import Carrusel from "../components/Carrusel";
 import { collection, getFirestore , getDocs, query, where } from "firebase/firestore"
 

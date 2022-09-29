@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import CarritoContext from "../context/CarritoContext";
 import {addDoc, collection, getFirestore} from "firebase/firestore";
 
@@ -16,9 +16,6 @@ const Form = () => {
 
     const [token, setToken] = useState(undefined);
 
-    useEffect(()=>{
-    },[])
-
     const change = (event) => {
         const newUser = {...user, [event.target.name]: event.target.value}
         setUser(newUser);
@@ -31,9 +28,7 @@ const Form = () => {
                 total: carrito.totalPagar
             }
         );
-        console.log(order);
     }
-
 
     const sendOrder = () => {
         const db = getFirestore();

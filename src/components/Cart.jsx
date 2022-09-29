@@ -1,17 +1,11 @@
 import CarritoContext from "../context/CarritoContext";
-import { useEffect, useState, useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Form from "./Form";
 
 const Cart = () => {
-
     //Context
     const carrito = useContext(CarritoContext)
-    
-
-    useEffect(()=>{
-
-    },[])
 
     return(
         <div className="carritoContainer">
