@@ -6,11 +6,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CategoryContainer from './container/CategoryContainer';
 import Cart from './components/Cart';
 import CarritoProvider from './context/CarritoProvider';
-import FavoritosContainer from './container/FavoritosContainer';
 import Footer from './components/Footer';
 
 function App() {
-
   return (
     <div className="App">
         <BrowserRouter>
@@ -21,7 +19,6 @@ function App() {
               <Route path='/categoria/:categoriaId' element={<CategoryContainer/>}/>
               <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
               <Route path='/cart' element={<Cart/>}/>
-              <Route path='/favoritos' element={<FavoritosContainer/>}/>
             </Routes>
             <Footer/>
           </CarritoProvider>

@@ -17,11 +17,9 @@ const ItemDetailContainer = () => {
         })
     }
 
-
     useEffect(() => {
         getItem();
     },[])
-
 
     return (
         <div className="itemDetailContainer">

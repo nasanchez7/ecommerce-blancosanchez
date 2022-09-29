@@ -1,10 +1,10 @@
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import CarritoContext from "../context/CarritoContext";
-import Buscador from "./Buscador";
 import CartWidget from "./CartWidget";
 
 const Nav = () => {
+
     const categorias = [
         {
             name: "Samsung",
@@ -18,11 +18,9 @@ const Nav = () => {
             name: "Motorola",
             path: "motorola"
         }
-    ]
+    ];
 
-    const carrito = useContext(CarritoContext);
-
-    useEffect(() =>{
+    const mostrarCategorias = () => {
         const btnDrop = document.getElementById("btnDrop")
         const dropdown = document.getElementById("dropdown");
         const btnClose = document.getElementById("btnClose");
@@ -35,9 +33,15 @@ const Nav = () => {
             dropdown.classList.remove("dropdown-activo");
             dropdown.classList.add("dropdown-oculto");
             btnClose.innerText = ""
-            console.log("click");
         })
+    };
+
+    const carrito = useContext(CarritoContext);
+
+    useEffect(() =>{
+        mostrarCategorias();
     },[])
+
 
     return (
             <nav>
@@ -47,7 +51,6 @@ const Nav = () => {
                             <h2>OpenMarket</h2>
                     </div>
                 </Link>
-                <Buscador/>
                 <div className="nav-items">
                     <div className="categorias">
                             <h3 id="btnDrop">Marcas</h3>
@@ -62,10 +65,9 @@ const Nav = () => {
                     </div>
                     <ul>
                         <Link to={"/"}><h3>Catalogo</h3></Link>  
-                        <Link to={"/favoritos"}><h3>Favoritos</h3></Link> 
                     </ul>
                 </div>
-                {carrito.carrito.length == 0 ? "" :
+                {carrito.carrito.length === 0 ? "" :
                 <Link to={'/cart'}>
                     <CartWidget />
                 </Link>

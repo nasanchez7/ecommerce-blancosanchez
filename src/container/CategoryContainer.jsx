@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../components/ItemList";
 import Carrusel from "../components/Carrusel";
@@ -10,22 +10,14 @@ const CategoryContainer = () => {
     const [productos, setProductos] = useState([]);
 
     const obtenerProductos = async () =>{
-
         const db = getFirestore();
-
         const items = query(collection(db, "items"), where("category", "==", categoriaId));
-
         getDocs(items).then((snapshot)=>{
             setProductos(snapshot.docs.map((doc) => ({ id:doc.id, ...doc.data() })));
         })
-
     }
 
     obtenerProductos();
-
-
-    useEffect(() => {
-    }, [])
 
     return (
         <div className="categoriaContainer">

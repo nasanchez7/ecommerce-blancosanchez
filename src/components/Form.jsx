@@ -27,18 +27,22 @@ const Form = () => {
                 ],
                 total: carrito.totalPagar
             }
-        );
+        )
     }
 
     const sendOrder = () => {
-        const db = getFirestore();
-        const ordersCollection = collection(db, "orders");
-        addDoc(ordersCollection, order).then((snapshot)=>setToken(snapshot.id))
+            const db = getFirestore();
+            const ordersCollection = collection(db, "orders");
+            if(carrito.carrito.length === 0){
+                return
+            }else{
+                addDoc(ordersCollection, order).then((snapshot)=>setToken(snapshot.id))
+            }
     };  
 
     return(
         <div className="formContainer">
-            {token == undefined ? 
+            {token === undefined ? 
             <form onSubmit={(event) => event.preventDefault()}>
                 <div className="inputs">
                     <input type="text" name="name" placeholder="Nombre" onChange={change} required/>
@@ -47,6 +51,7 @@ const Form = () => {
                 <input type="email" name="email" placeholder="Tu correo electronico" onChange={change} required/>
                 <button onClick={() => {
                     sendOrder()
+                    carrito.clearCart();
                 }}>Finalizar compra</button>
             </form>
             :

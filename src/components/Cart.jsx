@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Form from "./Form";
 
 const Cart = () => {
-    //Context
+
     const carrito = useContext(CarritoContext)
 
     return(
@@ -20,7 +20,7 @@ const Cart = () => {
                 </div> : ""}
             </div>
             <div className="carrito">
-                {carrito.carrito.length == 0 ? 
+                {carrito.carrito.length === 0 ? 
                 <div className="noProducts">
                     <h3>No hay productos en el carrito</h3>
                     <Link to={"/"}>Explorar productos</Link>
@@ -53,7 +53,7 @@ const Cart = () => {
                     <h4>$ {carrito.totalPagar}</h4>
                 </div>
                 : ""}
-                {carrito.carrito.length > 0 ? <Form></Form> : ""}
+                <Form></Form>
             </div>
         </div>
     )
