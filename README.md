@@ -1,6 +1,6 @@
 # OpenMarket
 
-- [OpenMarket](https://github.com/nasanchez7 "OpenMarket") es un ecommerce creado con ReactJs.
+- [OpenMarket](https://openmarketecommerce.netlify.app/ "OpenMarket") es un ecommerce creado con ReactJs.
 
 ## Funcionalidades
 
